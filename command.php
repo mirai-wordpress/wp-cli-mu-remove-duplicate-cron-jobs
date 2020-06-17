@@ -34,7 +34,7 @@ class removing_cron_jobs extends WP_CLI_Command {
 		$blogs_id = $wpdb->get_col( "SELECT blog_id FROM {$wpdb->prefix}blogs" );
 		//recorrer con foreach
 		//foreach( $blogs_id as $blog_id ){
-			switch_to_blog( 1738 );
+			switch_to_blog( 1195 );
 			$this->remove_duplicate_cron_jobs();
 			restore_current_blog();
 		//}
