@@ -1,0 +1,1 @@
+{"name":"remove-duplicate-cron-jobs","type":"command","description":"","homepage":"https:\/\/es.mirai.com","keywords":["wp-cli"],"license":"MIT","require":{"php":">=5.3.0"},"authors":[{"name":"Webdev Mirai","homepage":"https:\/\/es.mirai.com","email":"webdev@mirai.com","role":"Developer"}],"autoload":{"files":["command.php"]},"dirname":"remove-cron-jobs"}
