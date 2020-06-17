@@ -27,17 +27,15 @@ class removing_cron_jobs extends WP_CLI_Command {
 	    WP_CLI::success( get_current_blog_id(). " done" );
 	}
 
-	//recorrer todos los sites
+
 	public function remove_duplicate_cron_jobs_all_sites(){
 		global $wpdb;
-		//obtener lista de sites
 		$blogs_id = $wpdb->get_col( "SELECT blog_id FROM {$wpdb->prefix}blogs" );
-		//recorrer con foreach
-		//foreach( $blogs_id as $blog_id ){
-			switch_to_blog( 1195 );
+		foreach( $blogs_id as $blog_id ){
+			switch_to_blog( $blog_id );
 			$this->remove_duplicate_cron_jobs();
 			restore_current_blog();
-		//}
+		}
 		WP_CLI::success( 'Done in all sites');
 	}
 	
